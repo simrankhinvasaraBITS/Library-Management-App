@@ -1,0 +1,82 @@
+/* Container Styling */
+.container {
+    max-width: 800px;
+  }
+  
+  /* Page Header */
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Borrowing Card Styling */
+  .borrowing-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+  }
+  
+  .borrowing-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  /* Book Title */
+  .book-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+  }
+  
+  /* Borrower and Date Info */
+  .borrower-name, .borrow-date, .due-date, .status {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 8px;
+  }
+  
+  /* Status Indicator */
+  .status {
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .status.active {
+    color: #dc3545;
+    background-color: #fce7e7;
+  }
+  
+  .status.returned {
+    color: #28a745;
+    background-color: #e0f7ea;
+  }
+  
+  /* Return Button */
+  .btn-return {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 3px 6px rgba(220, 53, 69, 0.3);
+  }
+  
+  .btn-return:hover {
+    background-color: #c82333;
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.4);
+  }
+  

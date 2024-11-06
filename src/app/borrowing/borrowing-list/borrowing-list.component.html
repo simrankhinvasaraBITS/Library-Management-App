@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h2 class="text-center text-dark mb-4">Borrowings</h2>
+  
+    <!-- Borrowed Books List -->
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4" *ngFor="let borrowing of borrowings">
+        <div class="borrowing-card shadow-sm">
+          <div class="borrowing-details">
+            <h5 class="book-title">{{ borrowing.bookTitle }}</h5>
+            <p class="borrower-name">Borrowed by: {{ borrowing.borrowerName }}</p>
+            
+            <!-- Borrow and Due Dates -->
+            <p class="borrow-date">Borrow Date: {{ borrowing.borrowDate | date: 'MMMM d, y' }}</p>
+            <p class="due-date">Due Date: {{ borrowing.dueDate | date: 'MMMM d, y' }}</p>
+            
+            <!-- Status Indicator -->
+            <p class="status" [ngClass]="borrowing.returned ? 'returned' : 'active'">
+              Status: {{ borrowing.returned ? 'Returned' : 'Active' }}
+            </p>
+          </div>
+  
+          <!-- Return Book Button -->
+          <button *ngIf="!borrowing.returned" class="btn btn-danger btn-return" (click)="returnBook(borrowing)">Return Book</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,64 @@
+/* Navbar Styling */
+.custom-navbar {
+  padding: 1rem;
+  background-color: #f0f0f3; /* Soft gray */
+  border-radius: 15px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #3b3b58;
+}
+
+.nav-link {
+  color: #3b3b58;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #007bff;
+}
+
+/* Hero Section with Neumorphic Card */
+.hero-section {
+  background-color: #e0e0e0; /* Soft background for hero */
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neumorphic-card {
+  background: #f0f0f3;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff; /* Neumorphism */
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.neumorphic-card h1 {
+  color: #3b3b58;
+  font-weight: 700;
+}
+
+.neumorphic-card .btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 50px; /* Rounded button */
+  transition: transform 0.2s;
+}
+
+.neumorphic-card .btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.lead {
+  color: #6c757d;
+}

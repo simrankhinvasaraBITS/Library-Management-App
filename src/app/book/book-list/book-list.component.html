@@ -1,0 +1,57 @@
+<!-- Books Collection Header -->
+<div class="container mt-5">
+  <h2 class="text-center text-dark mb-4">Books Collection</h2>
+
+  <!-- Book Cards -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let book of books">
+      <div class="book-card shadow-sm">
+        <div class="book-card-header">
+          <h5 class="book-title">{{ book.title }}</h5>
+          <p class="book-author">by {{ book.author }}</p>
+        </div>
+        <p class="book-genre">{{ book.genre }}</p>
+        
+        <!-- Availability Indicator -->
+        <p class="book-availability">
+          <span [ngClass]="book.available ? 'available-status' : 'unavailable-status'">
+            <i class="bi" [ngClass]="book.available ? 'bi-check-circle-fill' : 'bi-x-circle-fill'"></i>
+            {{ book.available ? 'Available' : 'Unavailable' }}
+          </span>
+        </p>
+
+        <!-- View Details Button -->
+        <button class="btn btn-primary btn-view-details" (click)="openBookModal(book)">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Book Details Modal -->
+<div class="modal fade" id="bookDetailsModal" tabindex="-1" aria-labelledby="bookDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content elegant-modal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookDetailsLabel">{{ selectedBook?.title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="book-details">
+          <p><strong>Author:</strong> {{ selectedBook?.author }}</p>
+          <p><strong>Genre:</strong> {{ selectedBook?.genre }}</p>
+          <p><strong>Availability:</strong> 
+            <span [ngClass]="selectedBook?.available ? 'available-status' : 'unavailable-status'">
+              <i class="bi" [ngClass]="selectedBook?.available ? 'bi-check-circle-fill' : 'bi-x-circle-fill'"></i>
+              {{ selectedBook?.available ? 'Available' : 'Unavailable' }}
+            </span>
+          </p>
+          <p><strong>Description:</strong> {{ selectedBook?.description || 'No description available' }}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" *ngIf="selectedBook?.available" (click)="borrowBook(selectedBook)">Borrow</button>
+      </div>
+    </div>
+  </div>
+</div>

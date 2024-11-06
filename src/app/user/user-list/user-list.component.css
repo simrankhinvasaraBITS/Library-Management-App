@@ -1,0 +1,56 @@
+.container {
+  max-width: 1200px;
+}
+
+/* Title Styling */
+h2 {
+  font-weight: 600;
+  color: #3c3c3c;
+}
+
+/* Elegant User Card */
+.user-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* User Card Header */
+.user-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* User Role Styling */
+.user-role {
+  color: #555555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
